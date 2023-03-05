@@ -1,10 +1,11 @@
+@import "../../styles/functions";
+@import "../../styles/variables";
+
+
 .itemContainer {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-direction: column;
-  background: #FFFFFF;
-  border-radius: 5px;
+  @include flex(column, center, space-around);
+  @include border-shadow();
+  background: $palette2;
   width: 25vw;
   min-height: 22vh;
   padding: 5px;
@@ -18,9 +19,7 @@
 }
 
 .title {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+  @include flex(row, center, space-around);
   width: 100%;
 
   span {

@@ -1,17 +1,18 @@
-.group {
-  display: flex;
-  flex-direction: column;
+@import "../../styles/functions";
+@import "../../styles/variables";
 
+.group {
+  @include flex(column, flex-start, none);
 
   input {
-    border: 2px solid #ECECEC;
+    border: 2px solid $palette2;
     padding: 10px;
     border-radius: 5px;
     width: 20vw;
     font-size: 1.2rem;
 
     &:focus-visible {
-      border-color: black;
+      border-color: $palette4;
     }
   }
 

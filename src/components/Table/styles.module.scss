@@ -1,44 +1,14 @@
+@import "../../styles/functions";
+@import "../../styles/variables";
+
 .table {
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-  border-radius: 5px;
-  margin: 20px 60px;
-  background: #FFFFFF;
-}
-
-.tableHeader {
-  padding: 10px;
-  border-bottom: 2px solid #ECECEC;
-  width: 100%;
-
-  tr {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-
-    th {
-      width: 100%;
-      text-align: left;
-      font-size: 1.1rem;
-    }
-  }
+  @include flex(column, center, center);
+  @include space(20px 60px, 10px, 10px);
+  @include border-shadow();
+  background: $palette3;
 }
 
 .tableBody {
   padding: 10px;
   width: 100%;
-
-  tr {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    gap: 10px;
-
-    td {
-      width: 100%;
-      padding: 5px;
-      font-size: 1.1rem;
-    }
-  }
 }

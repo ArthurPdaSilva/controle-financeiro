@@ -1,0 +1,17 @@
+@mixin flex($direction, $align, $justify) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin space($margin, $padding, $gap) {
+  margin: $margin;
+  padding: $padding;
+  gap: $gap;
+}
+
+@mixin border-shadow() {
+  border-radius: 5px;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.25);
+}

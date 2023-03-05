@@ -1,0 +1,13 @@
+@import "../../styles/functions";
+
+.cell {
+  @include flex(row, none, space-around);
+  width: 100%;
+  gap: 10px;
+
+    td {
+      width: 100%;
+      padding: 5px;
+      font-size: 1.1rem;
+    }
+  }

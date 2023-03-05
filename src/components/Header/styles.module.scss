@@ -1,11 +1,13 @@
+@import "../../styles/variables";
+
 .header {
-  background: #0E9347;
+  background: $palette1;
   padding: 10px;
   height: 30vh;
 
   h1 {
     text-align: center;
     font-size: 3rem;
-    color: #FFFFFF;
+    color: $palette2;
   }
 }

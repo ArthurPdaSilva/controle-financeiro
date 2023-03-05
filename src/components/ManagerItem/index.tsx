@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './styles.module.scss';
-import { FiAlertCircle } from 'react-icons/fi';
 
 type ManagerProps = {
   title: string;

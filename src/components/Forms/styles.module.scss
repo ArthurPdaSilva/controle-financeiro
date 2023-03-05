@@ -1,26 +1,24 @@
-.forms {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  padding: 10px;
-  gap: 20px;
-  border-radius: 5px;
-  margin: 20px 60px;
-  background: #FFFFFF;
+@import "../../styles/functions";
+@import "../../styles/variables";
 
+.forms {
+  @include flex(row, center, space-around);
+  @include space(20px 60px, 10px, 20px);
+  @include border-shadow();
+  background: $palette3;
 
   button {
+    @include border-shadow();
     border: none;
     padding: 10px;
     width: 15vw;
     font-size: 1.5rem;
-    background: #0E9347;
-    color: #FFFFFF;
-    border-radius: 5px;
+    background: $palette1;
+    color: $palette3;
     transition: all ease-in-out .3s;
 
     &:hover {
-      background: #0c6c34;
+      background: $palette1-variant;
     }
 
   }

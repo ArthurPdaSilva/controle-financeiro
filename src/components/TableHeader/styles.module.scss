@@ -1,0 +1,19 @@
+@import "../../styles/functions";
+@import "../../styles/variables";
+
+.tableHeader {
+  padding: 10px;
+  border-bottom: 3px solid $palette2;
+  width: 100%;
+
+  tr {
+    @include flex(row, none, space-around);
+    width: 100%;
+
+    th {
+      width: 100%;
+      text-align: left;
+      font-size: 1.1rem;
+    }
+  }
+}

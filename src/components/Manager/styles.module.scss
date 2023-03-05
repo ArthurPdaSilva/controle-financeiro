@@ -1,7 +1,6 @@
+@import "../../styles/functions";
+
 .manager {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  margin-top: -60px;
-  padding: 10px;
+  @include flex(row, center, space-around);
+  @include  space(-60px 0 0 0, 10px, 10px);
 }
