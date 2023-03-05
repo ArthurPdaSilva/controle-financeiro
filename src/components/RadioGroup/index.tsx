@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './styles.module.scss';
 import InputProps from '../../@types/InputProps';
 
-const InputGroup = ({ label, setValue }: InputProps) => {
+const InputGroup = ({ label, value, setValue }: InputProps) => {
   return (
     <div className={styles.radio}>
       <label htmlFor={label}>{label}</label>
@@ -12,6 +12,7 @@ const InputGroup = ({ label, setValue }: InputProps) => {
         id={label}
         value={label}
         onChange={(e) => setValue(e.target.value)}
+        checked={value === label}
       />
     </div>
   );

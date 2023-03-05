@@ -47,7 +47,12 @@ const Forms = () => {
       <InputGroup label="Valor" value={balance} setValue={setBalance} />
 
       {types.map((e) => (
-        <RadioGroup label={e} setValue={setTypeSelected} key={e} />
+        <RadioGroup
+          label={e}
+          setValue={setTypeSelected}
+          key={e}
+          value={typeSelected}
+        />
       ))}
       <button type="submit">Adicionar</button>
     </form>

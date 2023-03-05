@@ -20,7 +20,7 @@ const Cell = ({ type, balance, description, id }: CellType) => {
     <tr className={styles.cell}>
       <td>{description}</td>
       <td>
-        {balance.toLocaleString('pt-br', {
+        {balance.toLocaleString('pt-BR', {
           style: 'currency',
           currency: 'BRL',
         })}
