@@ -1,15 +1,18 @@
 import React from 'react';
 import styles from './styles.module.scss';
+import InputProps from '../../@types/InputProps';
 
-type InputGroupProps = {
-  label: string;
-};
-
-const InputGroup = ({ label }: InputGroupProps) => {
+const InputGroup = ({ label, setValue }: InputProps) => {
   return (
     <div className={styles.radio}>
       <label htmlFor={label}>{label}</label>
-      <input type="radio" name="radios" id={label} />
+      <input
+        type="radio"
+        name="radios"
+        id={label}
+        value={label}
+        onChange={(e) => setValue(e.target.value)}
+      />
     </div>
   );
 };

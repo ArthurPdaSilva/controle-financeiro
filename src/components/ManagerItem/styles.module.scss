@@ -5,7 +5,7 @@
 .itemContainer {
   @include flex(column, center, space-around);
   @include border-shadow();
-  background: $palette2;
+  background: $palette3;
   width: 25vw;
   min-height: 22vh;
   padding: 5px;

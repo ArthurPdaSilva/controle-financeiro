@@ -1,16 +1,38 @@
-import React from 'react';
-import { FaArrowAltCircleUp, FaTrash } from 'react-icons/fa';
+import React, { useCallback } from 'react';
+import {
+  FaArrowAltCircleDown,
+  FaArrowAltCircleUp,
+  FaTrash,
+} from 'react-icons/fa';
 import styles from './styles.module.scss';
+import CellType from '../../@types/CellType';
+import useTables from '../../hooks/useTables';
 
-const Cell = () => {
+const Cell = ({ type, balance, description, id }: CellType) => {
+  const { cells, setCells } = useTables();
+
+  const handleDelete = (id: string) => {
+    const table = cells.filter((e) => e.id !== id);
+    setCells(table);
+  };
+
   return (
     <tr className={styles.cell}>
-      <td>Bonificação</td>
-      <td>R$ 1000,00</td>
+      <td>{description}</td>
       <td>
-        <FaArrowAltCircleUp size={25} color="green" />
+        {balance.toLocaleString('pt-br', {
+          style: 'currency',
+          currency: 'BRL',
+        })}
       </td>
       <td>
+        {type === 'Entrada' ? (
+          <FaArrowAltCircleUp size={25} color="green" />
+        ) : (
+          <FaArrowAltCircleDown size={25} color="red" />
+        )}
+      </td>
+      <td style={{ cursor: 'pointer' }} onClick={() => handleDelete(id)}>
         <FaTrash size={25} />
       </td>
     </tr>
