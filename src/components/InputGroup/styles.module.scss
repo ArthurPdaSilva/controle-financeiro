@@ -1,0 +1,18 @@
+.group {
+  display: flex;
+  flex-direction: column;
+
+
+  input {
+    border: 2px solid #ECECEC;
+    padding: 10px;
+    border-radius: 5px;
+    width: 20vw;
+    font-size: 1.2rem;
+
+    &:focus-visible {
+      border-color: black;
+    }
+  }
+
+}

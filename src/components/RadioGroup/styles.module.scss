@@ -1,0 +1,13 @@
+.radio {
+  display: flex;
+  gap: 10px;
+
+  input, label {
+    cursor: pointer;
+    font-size: 1.2rem;
+  }
+
+  input {
+    width: 25px;
+  }
+}
