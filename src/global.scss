@@ -1,0 +1,33 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:focus{
+  outline: 0;
+}
+
+input, button{
+  border: none;
+}
+
+button, a{
+  cursor: pointer;
+}
+
+a{
+  text-decoration: none;
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+  background: #ECECEC;
+  font-size: 16px;
+}
+
+html, body, #root{
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 100%;
+}

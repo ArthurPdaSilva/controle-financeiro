@@ -1,0 +1,29 @@
+.itemContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  background: #FFFFFF;
+  border-radius: 5px;
+  width: 25vw;
+  min-height: 22vh;
+  padding: 5px;
+
+  & > span {
+    font-size: 2rem;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+
+  span {
+    font-size: 1.3rem;
+  }
+}
