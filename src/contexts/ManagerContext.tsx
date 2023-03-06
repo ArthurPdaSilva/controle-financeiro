@@ -4,7 +4,7 @@ import CellType from '../@types/CellType';
 interface ManagerContextInterface {
   cells: CellType[];
   setCells: React.Dispatch<React.SetStateAction<CellType[]>>;
-  handleValue: (typeBalance: string) => number;
+  handleValue: (typeBalance: string) => string;
 }
 
 export const ManagerContext = createContext<ManagerContextInterface>(
@@ -36,11 +36,11 @@ export default function ManagerProvider({
   const handleValue = useCallback(
     (typeBalance: string) => {
       if (typeBalance === 'Total') {
-        return cells.reduce(getTotal, 0);
+        return cells.reduce(getTotal, 0).toFixed(2).replace('.', ',');
       } else if (typeBalance === 'Entradas') {
-        return cells.reduce(getTotalByEntrada, 0);
+        return cells.reduce(getTotalByEntrada, 0).toFixed(2).replace('.', ',');
       } else {
-        return cells.reduce(getTotalBySaida, 0);
+        return cells.reduce(getTotalBySaida, 0).toFixed(2).replace('.', ',');
       }
     },
     [cells],

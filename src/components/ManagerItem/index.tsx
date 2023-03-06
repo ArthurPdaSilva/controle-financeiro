@@ -9,7 +9,7 @@ type ManagerProps = {
 
 const ManagerItem = ({ title, icon }: ManagerProps) => {
   const { handleValue, cells } = useTables();
-  const [balance, setBalance] = useState(0);
+  const [balance, setBalance] = useState('');
 
   useEffect(() => {
     setBalance(handleValue(title));
