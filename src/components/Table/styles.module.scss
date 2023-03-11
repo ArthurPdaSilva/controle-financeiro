@@ -6,6 +6,12 @@
   @include space(20px 60px, 10px, 10px);
   @include border-shadow();
   background: $palette3;
+
+  @media(max-width: 800px) {
+    width: 100%;
+    margin: 0;
+  }
+
 }
 
 .tableBody {

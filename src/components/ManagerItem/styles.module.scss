@@ -7,7 +7,7 @@
   @include border-shadow();
   background: $palette3;
   width: 25vw;
-  min-height: 22vh;
+  height: 22vh;
   padding: 5px;
 
   & > span {
@@ -15,6 +15,16 @@
     font-weight: bold;
     width: 100%;
     text-align: center;
+  }
+
+  @media(max-width: 800px) {
+    width: 25%;
+    height: 10vh;
+    justify-content: center;
+
+    & > span {
+      font-size: 1rem;
+    }
   }
 }
 
@@ -24,5 +34,16 @@
 
   span {
     font-size: 1.3rem;
+  }
+
+  @media(max-width: 800px) {
+    span {
+      font-size: 1rem;
+      font-weight: bold;
+    }
+
+    svg {
+      display: none;
+    }
   }
 }

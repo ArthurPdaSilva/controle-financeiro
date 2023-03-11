@@ -22,4 +22,14 @@
     }
 
   }
+
+  @media(max-width: 800px) {
+    margin: 0;
+    width: 100vw;
+    flex-direction: column;
+
+    button {
+      width: 70vw;
+    }
+  }
 }

@@ -16,4 +16,10 @@
       font-size: 1.1rem;
     }
   }
+
+  @media(max-width: 800px) {
+    tr {
+      gap: 10px;
+    }
+  }
 }
